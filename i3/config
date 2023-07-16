@@ -11,24 +11,20 @@
 
 set $mod Mod4
 
-
 gaps inner 24
 gaps outer -16
 smart_gaps on
 for_window [class=".*"] border pixel 4
-client.focused #555555 #555555 #ffffff #2e9ef4     #CC0000
-client.focused #555555 #555555 #ffffff #2e9ef4     #CC0000
-
-
-for_window [class="^.*"] fullscreen disable
+for_window [class=".*"] fullscreen disable
 for_window [title="anydesk"] floating enable
+client.focused #555555 #555555 #ffffff #2e9ef4     #CC0000
+client.focused #555555 #555555 #ffffff #2e9ef4     #CC0000
 
-bindsym $mod+m exec flameshot gui
 # clipboard tool
 exec --no-startup-id greenclip daemon>/dev/null
+
+bindsym $mod+m exec flameshot gui
 bindsym $mod+c exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard
-
-
 
 
 

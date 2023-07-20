@@ -30,10 +30,5 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-setxkbmap -layout us,ru,ua
-setxkbmap -option 'grp:rctrl_rshift_toggle'
-
 #picom &
-polybar &
-feh --recursive --bg-fill --randomize ~/.wallpaper &
 exec i3

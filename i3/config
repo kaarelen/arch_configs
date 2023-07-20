@@ -9,24 +9,30 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+exec polybar
+exec_always polybar-msg cmd restart
+exec_always setxkbmap -layout us,ru,ua
+exec_always setxkbmap -option 'grp:rctrl_rshift_toggle'
+exec_always feh --recursive --bg-fill --randomize ~/.wallpaper &
+
 set $mod Mod4
 
-gaps inner 24
-gaps outer -16
+gaps inner 4
+#gaps outer -8
 smart_gaps on
-for_window [class=".*"] border pixel 4
-for_window [class=".*"] fullscreen disable
-for_window [title="anydesk"] floating enable
+for_window [class=".*"] border pixel -1
 client.focused #555555 #555555 #ffffff #2e9ef4     #CC0000
 client.focused #555555 #555555 #ffffff #2e9ef4     #CC0000
 
+for_window [title="anydesk"] floating enable
+
 # clipboard tool
-exec --no-startup-id greenclip daemon>/dev/null
 
 bindsym $mod+m exec flameshot gui
 bindsym $mod+c exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard
+bindsym $mod+z exec --no-startup-id polybar-msg cmd toggle
 
-
+exec --no-startup-id greenclip daemon>/dev/null
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.

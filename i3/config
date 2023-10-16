@@ -11,8 +11,6 @@
 
 exec polybar
 exec_always polybar-msg cmd restart
-exec_always setxkbmap -layout us,ru,ua
-exec_always setxkbmap -option 'grp:rctrl_rshift_toggle'
 exec_always feh --recursive --bg-fill --randomize ~/.wallpaper &
 
 set $mod Mod4

@@ -23,6 +23,7 @@ client.focused #555555 #555555 #ffffff #2e9ef4     #CC0000
 client.focused #555555 #555555 #ffffff #2e9ef4     #CC0000
 
 for_window [title="anydesk"] floating enable
+for_window [title="i3floating"] floating enable # for in dev applications
 
 
 # clipboard tool

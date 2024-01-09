@@ -24,7 +24,7 @@
         "idle_inhibitor"
     ],
     "custom/xorg_blame": {
-        "exec": "xlsclients -a | grep -oP 'archlinux\\s+\\K\\w+' | tr '\n' ' '",
+        "exec": "xlsclients -a | grep -oP 'cubic\\s+\\K\\w+' | tr '\n' ' '",
         "interval": 10
     },
     "mpd": {

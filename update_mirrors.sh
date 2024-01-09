@@ -5,9 +5,11 @@ echo $full_country_name
 
 if [[ -n $full_country_name ]];
 then
-	reflector --country $full_country_name --sort score --download-timeout 1 --fastest 5 > /etc/pacman.d/mirrorlist
+	# reflector --country $full_country_name --sort score --download-timeout 1 --fastest 5 > /etc/pacman.d/mirrorlist
+	reflector --verbose --download-timeout 1 --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 else
 	echo "cant find your country"
 	exit
 fi
 echo "end"
+# paru -Syyu && sudo pacman -Rsn $(pacman -Qdttq)

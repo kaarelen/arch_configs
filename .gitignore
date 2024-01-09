@@ -1,9 +1,9 @@
 Bitwarden/
-Code - OSS/
-chromium/
-discord/
-libfm/
-pulse/
-unity3d/
-fish/fish_variables
+BraveSoftware/
+Code/
 cef_user_data/
+chromium/
+dconf/
+pulse/
+
+fish/fish_variables

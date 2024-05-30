@@ -1,0 +1,30 @@
+{
+    "telemetry.telemetryLevel": "off",
+    "telemetry.enableTelemetry": false,
+    "window.zoomLevel": 3,
+    "window.restoreWindows": "none",
+    "window.dialogStyle": "custom",
+    "window.menuBarVisibility": "toggle",
+    // "window.titleBarStyle": "custom",
+    "workbench.settings.openDefaultSettings": true,
+    "workbench.tree.enableStickyScroll": true,
+    //"workbench.editor.enablePreview": false,
+    "terminal.integrated.defaultProfile.linux": "fish",
+    "editor.formatOnSave": true,
+    "files.autoSave": "off",
+    "files.autoSaveDelay": 1000,
+    "files.enableTrash": false,
+    "hexeditor.showDecodedText": true,
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer"
+    },
+    "gitlens.graph.minimap.dataType": "lines",
+    "hexeditor.columnWidth": 24,
+    "hexeditor.defaultEndianness": "little",
+    "hexeditor.inspectorType": "aside",
+    // "[rust]": {
+    //     "editor.defaultFormatter": "rust-lang.rust-analyzer"
+    // },
+    // "pascal.formatter.engine": "jcf-quadroid",
+    // "pascal.formatter.enginePath": "/usr/bin/ptop",
+}

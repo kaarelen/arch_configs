@@ -1,0 +1,82 @@
+/* :root {
+    --green: rgba(0,255,153,1); 00ff99 
+    --blue: rgba(51,204,255,1); 33ccff
+    --inactive: #595959;
+} */
+
+window {
+    margin: 0px;
+    /* background: linear-gradient(-45deg, #00ff99 0%, #33ccff 100%); */
+    background: linear-gradient(350deg, rgba(0, 255, 153, 1) 5%, rgba(51, 204, 255, 1) 100%);
+    border-radius: 10px;
+}
+
+#input {
+    font-size: 24;
+    padding: 8px 0;
+    margin: 8px;
+    border: 1px solid black;
+    /* !sick */
+    color: #f8f8f2;
+    background-color: #595959;
+    caret-color: #f8f8f2;
+}
+#input:focus {
+    box-shadow: none;
+    border: 1px solid rgba(51, 204, 255, 1);
+}
+
+#inner-box {
+    margin: 5px;
+    border: none;
+    background-color: #000000;
+}
+
+#outer-box {
+    margin: 4px;
+    border: none;
+    background-color: #000000;
+    border-radius: 10px;
+}
+
+#scroll {
+    margin: 0px;
+    border: none;
+}
+
+#text {
+    font-size: 24;
+    margin: 5px;
+    border: none;
+    color: #f8f8f2;
+}
+
+#entry.activatable {
+    background-color: #595959;
+}
+
+/* !sick !sick !sick */
+#entry {
+    padding-left: 17;
+}
+#entry expander {
+    margin-left: -17;
+}
+/* !sick !sick !sick */
+
+#entry.activatable #text {
+    color: #f8f8f2;
+}
+
+#entry>* {
+    color: #f8f8f2;
+}
+
+#entry:selected {
+    background-color: #595959;
+}
+
+#entry:selected #text {
+    /* color: rgba(0,255,153,1); */
+    font-weight: bold;
+}

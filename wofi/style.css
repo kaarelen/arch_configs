@@ -21,6 +21,7 @@ window {
     background-color: #595959;
     caret-color: #f8f8f2;
 }
+
 #input:focus {
     box-shadow: none;
     border: 1px solid rgba(51, 204, 255, 1);
@@ -33,7 +34,7 @@ window {
 }
 
 #outer-box {
-    margin: 2px;
+    margin: 4px;
     border: none;
     background-color: #000000;
     border-radius: 10px;
@@ -59,9 +60,11 @@ window {
 #entry {
     padding-left: 17;
 }
+
 #entry expander {
     margin-left: -17;
 }
+
 /* !sick !sick !sick */
 
 #entry.activatable #text {

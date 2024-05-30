@@ -1,12 +1,15 @@
 {
+    //"mode": "overlay",
     "layer": "top", // Waybar at top layer
     "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 36, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 2, // Gaps between modules (4px)
+    "modifier-reset": "release",
     // Choose the order of the modules
     "modules-left": [
         "hyprland/workspaces",
+    	"gamemode",
         "custom/xorg_blame"
     ],
     "modules-center": [
@@ -18,6 +21,7 @@
         "mpd",
         "pulseaudio",
         "network",
+	"disk",
         "cpu",
         "memory",
         "clock",
@@ -26,6 +30,18 @@
     "custom/xorg_blame": {
         "exec": "xlsclients -a | grep -oP 'cubic\\s+\\K\\w+' | tr '\n' ' '",
         "interval": 10
+    },
+    "gamemode": {
+	"format": "{glyph}",
+	"format-alt": "{glyph} {count}",
+	"glyph": "",
+	"hide-not-running": true,
+	"use-icon": true,
+	"icon-name": "input-gaming-symbolic",
+	"icon-spacing": 4,
+	"icon-size": 20,
+	"tooltip": true,
+	"tooltip-format": "Games running: {count}"
     },
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
@@ -74,12 +90,13 @@
         "tooltip": false
     },
     "memory": {
-        "format": "{}% "
+        "format": "{percentage}% "
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
+        //"format-ethernet": "{ipaddr}/{cidr} ",
+        "format-ethernet": "{bandwidthDownBytes} {bandwidthUpBytes}",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
@@ -87,7 +104,7 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
+        "format": "{volume}% {icon}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",

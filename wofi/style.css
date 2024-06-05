@@ -7,8 +7,8 @@
 window {
     margin: 0px;
     /* background: linear-gradient(-45deg, #00ff99 0%, #33ccff 100%); */
-    background: linear-gradient(350deg, rgba(0, 255, 153, 1) 5%, rgba(51, 204, 255, 1) 100%);
-    border-radius: 10px;
+    /* background: linear-gradient(350deg, rgba(0, 255, 153, 1) 5%, rgba(51, 204, 255, 1) 100%);
+    border-radius: 10px; */
 }
 
 #input {
@@ -30,7 +30,7 @@ window {
 #inner-box {
     margin: 5px;
     border: none;
-    background-color: #000000;
+    /* background-color: #000000; */
 }
 
 #outer-box {
@@ -80,6 +80,6 @@ window {
 }
 
 #entry:selected #text {
-    /* color: rgba(0,255,153,1); */
+    /* color: rgba(0, 255, 153, 1); */
     font-weight: bold;
 }
